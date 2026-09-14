@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TeamDocs turns scattered company knowledge into answers you can trace. Explore a fictional company library, with every source one click away.">
+  <title>TeamDocs — Find the answer. Keep the evidence.</title>
+  <link rel="icon" href="/static/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/i18n.js" defer></script>
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="TeamDocs home"><img src="/static/mark.svg" alt="" width="34" height="34"><span>teamdocs<span class="brand-dot">.</span></span></a>
+  <div class="workspace"><div class="workspace-symbol">N</div><div><strong>Northstar</strong><small>Demo workspace</small></div><span class="workspace-arrow">⌄</span></div>
+  <p class="nav-label">YOUR KNOWLEDGE, CONNECTED</p>
+  <nav aria-label="Main navigation">
+    <button class="nav-item active" data-view="search"><span aria-hidden="true">⌕</span> Ask your library <span class="nav-shortcut">/</span></button>
+    <button class="nav-item" data-view="library"><span aria-hidden="true">▤</span> Document library <span class="count" id="nav-count">—</span></button>
+    <button class="nav-item" data-view="quality"><span aria-hidden="true">◈</span> Quality lab</button>
+    <button class="nav-item" data-view="about"><span aria-hidden="true">◇</span> How it works</button>
+  </nav>
+  <div class="sidebar-note"><div class="mini-orbit" aria-hidden="true">✳</div><strong>Knowledge with receipts.</strong><p>Every useful answer starts with a source you can check.</p><a href="/guide/" target="_blank" rel="noopener">Read the project guide <span>↗</span></a></div>
+  <div class="sidebar-bottom"><span class="status-dot"></span><span id="sidebar-status">Connecting to library</span><span class="version">v1.0</span></div>
+</aside>
+<div class="page-shell">
+  <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb">Ask your library</strong></div><div class="topbar-right"><div class="language-control" title="Interface only; documents and answers keep their original language."><label for="language" class="sr-only">Interface language</label><span aria-hidden="true">◎</span><select id="language" aria-label="Interface language"><option value="en" translate="no">English</option><option value="fr" translate="no">Français</option></select></div><span class="demo-pill" id="mode-pill">PUBLIC DEMO</span><a href="/guide/interview.html" target="_blank" rel="noopener" class="text-link">Behind the build <span>↗</span></a><span class="avatar" aria-label="Northstar workspace">N</span></div></header>
+  <main id="main">
+    <section id="view-search" class="view">
+      <div class="hero"><div class="eyebrow"><span class="status-dot"></span> A LITTLE LESS SEARCHING. A LOT MORE CLARITY.</div><h1>Your team knows.<br> <em>Now you do, too.</em></h1><p>Find your way through handbooks, guides and the little details.<br> Ask a question. Follow the evidence. Get back to what matters.</p><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="floating-sheet sheet-back"><i></i><i></i><i></i></div><div class="floating-sheet sheet-front"><span>↗</span><i></i><i></i><i></i><b>FOUND IN YOUR LIBRARY</b></div><span class="art-spark">✳</span></div></div>
+      <form id="ask-form" class="search-composer"><label for="question" class="sr-only">Your question</label><div class="composer-input"><span aria-hidden="true" class="search-glyph">⌕</span><textarea id="question" maxlength="600" rows="2" placeholder="How do I get access to the staging environment?" required minlength="3"></textarea><button id="ask-button" aria-label="Find answers" class="submit-button" type="submit"><span>Find answers</span><span aria-hidden="true">↗</span></button></div><div class="composer-footer"><div class="select-wrap"><label for="category">Search in</label><select id="category"><option value="All">All collections</option></select></div><div class="select-wrap method-wrap"><label for="method">Search</label><select id="method"><option value="bm25">Keyword</option></select></div><span class="key-hint">Enter to search <kbd>↵</kbd></span></div></form>
+      <div id="mode-note" class="mode-note"><span>◌</span> Connecting to the demo library…</div>
+      <div id="error" class="error-banner" role="alert" hidden></div>
+      <section id="answer-area" class="answer-area" aria-live="polite" aria-busy="false" hidden></section>
+      <section class="starter-section" id="starters"><div class="section-heading"><h2>A good place to start</h2><span>SMALL QUESTIONS. USEFUL ANSWERS.</span></div><div class="question-grid"><button class="question-card" data-question="How do I request access to the staging environment?"><span class="card-icon sage">↗</span><small>GET UNBLOCKED</small><strong>How do I get<br> staging access?</strong><span class="card-bottom">Engineering <b>↗</b></span></button><button class="question-card" data-question="What should I do during my first week?"><span class="card-icon peach">☀</span><small>FIND YOUR FEET</small><strong>What should I do<br> in my first week?</strong><span class="card-bottom">People & culture <b>↗</b></span></button><button class="question-card" data-question="How do I report a security incident?"><span class="card-icon blue">◇</span><small>KNOW THE NEXT STEP</small><strong>How do I report<br> a security incident?</strong><span class="card-bottom">Security <b>↗</b></span></button></div></section>
+      <section class="collection-section"><div class="section-heading"><h2>A home for the details</h2><button class="inline-button" data-view="library">Explore the library <span>→</span></button></div><div id="collection-list" class="collection-list"></div></section>
+      <footer class="page-footer"><span>Built for questions. Designed for trust.</span><span>Fictional company · Real document search</span></footer>
+    </section>
+    <section id="view-library" class="view" hidden><div class="page-heading"><p class="eyebrow">THE SOURCE OF THE ANSWER</p><h1>The shared shelf<span>.</span></h1><p>A small, curated library for a fictional company. Open a document and see exactly what the search can read.</p></div><div class="library-tools"><label class="sr-only" for="library-search">Filter documents</label><input id="library-search" placeholder="Find a document by title or topic…" type="search"><label class="sr-only" for="library-category">Collection</label><select id="library-category"><option value="All">All collections</option></select></div><div id="library-grid" class="library-grid"></div></section>
+    <section id="view-quality" class="view" hidden><div class="page-heading"><p class="eyebrow">MEASURE FIRST. MAKE CLAIMS SECOND.</p><h1>Show your workings<span>.</span></h1><p>A transparent look at what the search retrieves, what we tested, and what still needs evaluation.</p></div><div id="quality-content"></div></section>
+    <section id="view-about" class="view" hidden><div class="page-heading"><p class="eyebrow">NO BLACK BOX REQUIRED</p><h1>From scattered docs<br> to <em>shared understanding.</em></h1><p>Think of TeamDocs as a librarian who finds the right pages before helping you read them.</p></div><div class="how-grid"><article><span>01 / PREPARE</span><h2>Give every passage an address.</h2><p>Documents are split into smaller sections. Each keeps its document title, section and PDF page number, so we can always find the original.</p></article><article><span>02 / FIND</span><h2>Look for the best evidence.</h2><p>The demo uses keyword search. Live mode can also search by meaning using embeddings, or combine both methods.</p></article><article><span>03 / EXPLAIN</span><h2>Keep the source in sight.</h2><p>The demo quotes exact passages. In live mode, an AI model writes a short answer from those passages and links each claim to its sources.</p></article></div><div class="about-callout"><span class="big-asterisk">✳</span><div><h2>Honesty is a feature.</h2><p>This is a student portfolio application with fictional company documents. It has no private company access, no enterprise permissions, and no promise of perfect answers. Its value is that you can inspect how it works.</p><a class="button-secondary" href="/guide/" target="_blank" rel="noopener">Explore the documentation ↗</a></div></div></section>
+  </main>
+</div>
+<dialog id="document-dialog"><div class="dialog-top"><span class="eyebrow">SOURCE READER</span><button id="close-dialog" aria-label="Close source reader">×</button></div><div id="document-content"></div></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+</body></html>

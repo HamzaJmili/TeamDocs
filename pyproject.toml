@@ -1,0 +1,10 @@
+[project]
+name = "teamdocs"
+version = "1.0.0"
+description = "Evidence-first document search, built to be understood."
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+

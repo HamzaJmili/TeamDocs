@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: teamdocs
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-dev.txt && python -m scripts.ingest --embeddings && python -m sphinx -W --keep-going -b html docs docs/_build/html
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    envVars:
+      - key: APP_MODE
+        value: live
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "6"
+
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: EMBEDDING_MODEL
+        value: gemini-embedding-001
+      - key: ANSWER_MODEL
+        value: gemini-3.6-flash
+      - key: LIVE_REQUESTS_PER_DAY
+        value: "50"

@@ -1,0 +1,404 @@
+{
+  "generated_at": "2026-09-14T00:42:27.996657+00:00",
+  "method": "bm25",
+  "split": "test",
+  "total_questions": 20,
+  "answerable_questions": 16,
+  "unanswerable_questions": 4,
+  "corpus_hash": "11ab1a622f0032bf94e0aca24f0b978122d83d4021344c1dab47178ab48d14fe",
+  "metrics": {
+    "hit_at_5": 1.0,
+    "recall_at_5": 1.0,
+    "mrr_at_5": 1.0,
+    "all_evidence_at_5": 1.0
+  },
+  "disclosure": "Synthetic corpus and author-written questions. This is a small engineering check, not an independent benchmark. Test questions are designated holdouts but visible in the repository. No LLM answer quality has been measured in this report.",
+  "cases": [
+    {
+      "id": "q04",
+      "split": "test",
+      "question": "What should I do during my first week?",
+      "expected_ids": [
+        "first-week-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "first-week-s1-1",
+        "first-week-s3-1",
+        "first-week-s2-1",
+        "support-priority-s2-1",
+        "remote-work-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q05",
+      "split": "test",
+      "question": "What should I finish by Friday of my first week?",
+      "expected_ids": [
+        "first-week-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "first-week-s2-1",
+        "first-week-s3-1",
+        "first-week-s1-1",
+        "meeting-rooms-s3-1",
+        "support-priority-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q09",
+      "split": "test",
+      "question": "When are routine production releases allowed?",
+      "expected_ids": [
+        "production-release-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "production-release-s2-1",
+        "production-release-s1-1",
+        "staging-access-s2-1",
+        "staging-access-s3-1",
+        "data-handling-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q10",
+      "split": "test",
+      "question": "When should we trigger a rollback?",
+      "expected_ids": [
+        "rollback-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "rollback-s1-1",
+        "rollback-s3-1",
+        "production-release-s3-1",
+        "production-release-s2-1",
+        "production-release-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q14",
+      "split": "test",
+      "question": "How do I request annual leave?",
+      "expected_ids": [
+        "time-off-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "time-off-s1-1",
+        "time-off-s3-1",
+        "staging-access-s1-1",
+        "learning-budget-s3-1",
+        "time-off-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q15",
+      "split": "test",
+      "question": "What are the remote work core hours?",
+      "expected_ids": [
+        "remote-work-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "remote-work-s1-1",
+        "remote-work-s2-1",
+        "remote-work-s3-1",
+        "support-priority-s2-1",
+        "security-incidents-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "question": "What should I check when the VPN will not connect?",
+      "expected_ids": [
+        "vpn-help-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "vpn-help-s1-1",
+        "vpn-help-s3-1",
+        "staging-access-s2-1",
+        "vpn-help-s2-1",
+        "password-reset-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "question": "How many failed VPN attempts before opening a ticket?",
+      "expected_ids": [
+        "vpn-help-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "vpn-help-s2-1",
+        "password-reset-s3-1",
+        "vpn-help-s3-1",
+        "staging-access-s2-1",
+        "vpn-help-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q24",
+      "split": "test",
+      "question": "Where should service secrets be stored?",
+      "expected_ids": [
+        "secrets-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "secrets-s1-1",
+        "secrets-s3-1",
+        "secrets-s2-1",
+        "support-priority-s2-1",
+        "api-conventions-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q25",
+      "split": "test",
+      "question": "What should I do if an API key is exposed?",
+      "expected_ids": [
+        "secrets-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "secrets-s2-1",
+        "api-conventions-s3-1",
+        "secrets-s1-1",
+        "security-incidents-s1-1",
+        "rollback-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q29",
+      "split": "test",
+      "question": "My staging permission stopped working after a month. What now?",
+      "expected_ids": [
+        "staging-access-s3-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "staging-access-s3-1",
+        "staging-access-s1-1",
+        "first-week-s3-1",
+        "remote-work-s1-1",
+        "time-off-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q30",
+      "split": "test",
+      "question": "I have joined the company. Who helps with everyday questions?",
+      "expected_ids": [
+        "first-week-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "first-week-s1-1",
+        "data-handling-s3-1",
+        "staging-access-s2-1",
+        "first-week-s3-1",
+        "support-priority-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q34",
+      "split": "test",
+      "question": "Can I use a colleague account if my authentication device is lost?",
+      "expected_ids": [
+        "password-reset-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "password-reset-s2-1",
+        "staging-access-s2-1",
+        "vpn-help-s1-1",
+        "password-reset-s3-1",
+        "password-reset-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q35",
+      "split": "test",
+      "question": "Can I copy production customer records into a test notebook?",
+      "expected_ids": [
+        "data-handling-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "data-handling-s2-1",
+        "production-release-s1-1",
+        "security-incidents-s2-1",
+        "production-release-s3-1",
+        "release-notes-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q39",
+      "split": "test",
+      "question": "What is the CEO salary?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "q40",
+      "split": "test",
+      "question": "What is the office parking reimbursement amount?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [
+        "expenses-s3-1",
+        "expenses-s2-1",
+        "expenses-s1-1"
+      ],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "q44",
+      "split": "test",
+      "question": "What is the emergency security phone number?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [
+        "security-incidents-s3-1",
+        "meeting-rooms-s1-1",
+        "production-release-s2-1",
+        "security-incidents-s1-1",
+        "security-incidents-s2-1"
+      ],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "q45",
+      "split": "test",
+      "question": "How many paid study leave days do I get?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [
+        "learning-budget-s3-1",
+        "time-off-s1-1",
+        "time-off-s3-1",
+        "expenses-s2-1",
+        "time-off-s2-1"
+      ],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "q49",
+      "split": "test",
+      "question": "What is needed for staging access and what must I test before a production release?",
+      "expected_ids": [
+        "staging-access-s1-1",
+        "production-release-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "production-release-s1-1",
+        "staging-access-s1-1",
+        "staging-access-s3-1",
+        "staging-access-s2-1",
+        "production-release-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q50",
+      "split": "test",
+      "question": "What should I do after leaking an API key and what belongs in the incident report?",
+      "expected_ids": [
+        "secrets-s2-1",
+        "security-incidents-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "secrets-s2-1",
+        "security-incidents-s1-1",
+        "security-incidents-s2-1",
+        "api-conventions-s3-1",
+        "rollback-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    }
+  ]
+}

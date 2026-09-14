@@ -1,0 +1,9 @@
+.git
+.env
+.venv
+__pycache__
+.pytest_cache
+docs/_build
+data/index/embeddings.npz
+data/index/embedding_meta.json
+

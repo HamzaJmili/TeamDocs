@@ -1,0 +1,542 @@
+[
+  {
+    "id": "api-conventions-s1-1",
+    "document_id": "api-conventions",
+    "title": "API conventions",
+    "category": "Engineering",
+    "section": "Authentication",
+    "page": null,
+    "text": "Northstar internal APIs use short-lived bearer tokens issued by the identity service. Never include tokens in URLs or application logs. Validate token scope on every protected route and return 401 for missing or invalid credentials."
+  },
+  {
+    "id": "api-conventions-s2-1",
+    "document_id": "api-conventions",
+    "title": "API conventions",
+    "category": "Engineering",
+    "section": "Pagination",
+    "page": null,
+    "text": "List endpoints use cursor pagination with a default page size of 25 and a maximum page size of 100. Responses include items and next_cursor fields. Clients should stop when next_cursor is null."
+  },
+  {
+    "id": "api-conventions-s3-1",
+    "document_id": "api-conventions",
+    "title": "API conventions",
+    "category": "Engineering",
+    "section": "Errors and retries",
+    "page": null,
+    "text": "API errors return a request_id, a stable error code, and a human-readable message. Retry 429 and transient 503 responses with exponential backoff and jitter. Do not retry non-idempotent writes unless the endpoint supports an idempotency key."
+  },
+  {
+    "id": "customer-feedback-s1-1",
+    "document_id": "customer-feedback",
+    "title": "Customer feedback workflow",
+    "category": "Product",
+    "section": "Capture feedback",
+    "page": null,
+    "text": "Record customer feedback in the Feedback Board with a short summary, source channel, and affected product area. Remove personal identifiers from shared notes. Link related feedback to avoid creating duplicate feature requests."
+  },
+  {
+    "id": "customer-feedback-s2-1",
+    "document_id": "customer-feedback",
+    "title": "Customer feedback workflow",
+    "category": "Product",
+    "section": "Prioritization",
+    "page": null,
+    "text": "The product team reviews feedback every Wednesday. Priority considers customer impact, frequency, strategic fit, and implementation effort. A feature request is not a delivery commitment until it appears in an approved release plan."
+  },
+  {
+    "id": "customer-feedback-s3-1",
+    "document_id": "customer-feedback",
+    "title": "Customer feedback workflow",
+    "category": "Product",
+    "section": "Close the loop",
+    "page": null,
+    "text": "When a requested improvement ships, the account owner informs the customer and links the release note. If a request is declined, explain the reason respectfully and keep the feedback record for future review."
+  },
+  {
+    "id": "data-handling-s1-1",
+    "document_id": "data-handling",
+    "title": "Data handling principles",
+    "category": "Security",
+    "section": "Classification",
+    "page": null,
+    "text": "Northstar classifies information as Public, Internal, or Restricted. Public information is approved for external sharing. Internal information stays inside the company. Restricted information includes credentials and identifiable customer records, and requires explicitly approved access."
+  },
+  {
+    "id": "data-handling-s2-1",
+    "document_id": "data-handling",
+    "title": "Data handling principles",
+    "category": "Security",
+    "section": "Development data",
+    "page": null,
+    "text": "Use synthetic data in development and staging. Do not copy production customer records into notebooks, test fixtures, or public repositories. Ask Security Desk for an approved workflow when a task genuinely requires restricted data."
+  },
+  {
+    "id": "data-handling-s3-1",
+    "document_id": "data-handling",
+    "title": "Data handling principles",
+    "category": "Security",
+    "section": "External AI tools",
+    "page": null,
+    "text": "Do not upload Internal or Restricted company information to external AI tools without explicit security approval. This TeamDocs demonstration contains fictional public documents only; enabling its live mode sends retrieved passages and questions to the model provider."
+  },
+  {
+    "id": "expenses-s1-1",
+    "document_id": "expenses",
+    "title": "Expense reimbursement",
+    "category": "People",
+    "section": "Submit a claim",
+    "page": null,
+    "text": "Submit expense claims in Finance Portal within 30 calendar days of the purchase. Attach an itemized receipt, business purpose, and project cost center. Claims without receipts require a written exception from Finance."
+  },
+  {
+    "id": "expenses-s2-1",
+    "document_id": "expenses",
+    "title": "Expense reimbursement",
+    "category": "People",
+    "section": "Approval and payment",
+    "page": null,
+    "text": "Your manager approves the business purpose and Finance checks the receipt and expense category. Approved reimbursements are paid in the next monthly payroll cycle. Finance returns incomplete claims with a request for missing information."
+  },
+  {
+    "id": "expenses-s3-1",
+    "document_id": "expenses",
+    "title": "Expense reimbursement",
+    "category": "People",
+    "section": "Travel bookings",
+    "page": null,
+    "text": "Get manager approval before booking business travel. Use the company travel portal for rail, flights, and hotels. Personal upgrades are not reimbursed unless approved in writing before booking."
+  },
+  {
+    "id": "first-week-s1-1",
+    "document_id": "first-week",
+    "title": "Your first week",
+    "category": "People",
+    "section": "Day one",
+    "page": null,
+    "text": "During your first week, start by activating your company account, setting up multi-factor authentication, and reading the onboarding checklist. On day one, meet your onboarding buddy and confirm that your laptop, email, and calendar work. Your buddy is your first contact for everyday questions."
+  },
+  {
+    "id": "first-week-s2-1",
+    "document_id": "first-week",
+    "title": "Your first week",
+    "category": "People",
+    "section": "Days two to five",
+    "page": null,
+    "text": "By Friday of your first week, complete security awareness training, attend the product introduction, and agree on a small first task with your manager. Book a 30-minute check-in with your buddy. New engineers can request staging access after account setup."
+  },
+  {
+    "id": "first-week-s3-1",
+    "document_id": "first-week",
+    "title": "Your first week",
+    "category": "People",
+    "section": "Finding help",
+    "page": null,
+    "text": "Use the People Help channel for onboarding and workplace questions. Send equipment problems to IT Support. Your manager owns the first-month goals and should review them with you at the end of week one."
+  },
+  {
+    "id": "laptop-setup-s1-1",
+    "document_id": "laptop-setup",
+    "title": "Laptop setup",
+    "category": "IT Support",
+    "section": "Initial setup",
+    "page": null,
+    "text": "IT Support provides an enrolled laptop with disk encryption and endpoint protection enabled. Sign in with your individual company account and install operating system updates before storing work files. Confirm that automatic screen lock activates after five minutes."
+  },
+  {
+    "id": "laptop-setup-s2-1",
+    "document_id": "laptop-setup",
+    "title": "Laptop setup",
+    "category": "IT Support",
+    "section": "Developer tools",
+    "page": null,
+    "text": "Engineers install Git, an approved editor, and the team runtime versions from the software catalog. Container tooling requires the standard developer configuration. Ask IT Support before installing software outside the approved catalog."
+  },
+  {
+    "id": "laptop-setup-s3-1",
+    "document_id": "laptop-setup",
+    "title": "Laptop setup",
+    "category": "IT Support",
+    "section": "Hardware problems",
+    "page": null,
+    "text": "Report laptop hardware problems through IT Support with the asset tag and a description of the fault. Do not open the device or arrange a third-party repair yourself. IT Support decides whether to repair or replace the device."
+  },
+  {
+    "id": "learning-budget-s1-1",
+    "document_id": "learning-budget",
+    "title": "Learning and development",
+    "category": "People",
+    "section": "Learning allowance",
+    "page": null,
+    "text": "The fictional Northstar learning allowance is 600 euros per employee per calendar year. It covers approved books, courses, and professional events related to your role. Unused allowance does not carry over into the next year."
+  },
+  {
+    "id": "learning-budget-s2-1",
+    "document_id": "learning-budget",
+    "title": "Learning and development",
+    "category": "People",
+    "section": "Course approval",
+    "page": null,
+    "text": "Before buying a course, send your manager the course link, cost, and learning objective. After approval, submit the receipt through the expense process and choose Learning as the category. Keep a short note on how the course relates to your work."
+  },
+  {
+    "id": "learning-budget-s3-1",
+    "document_id": "learning-budget",
+    "title": "Learning and development",
+    "category": "People",
+    "section": "Share your learning",
+    "page": null,
+    "text": "After completing a course or conference, share three useful takeaways with your team. A short written note or a ten-minute presentation is enough. Paid study leave is not specified by this guide."
+  },
+  {
+    "id": "meeting-rooms-s1-1",
+    "document_id": "meeting-rooms",
+    "title": "Meeting room handbook",
+    "category": "IT Support",
+    "section": "Reserve a room",
+    "page": null,
+    "text": "Reserve a meeting room by adding its resource calendar to the event invitation. Include the meeting duration and expected number of attendees. The room is confirmed only when the resource calendar accepts the invitation."
+  },
+  {
+    "id": "meeting-rooms-s2-1",
+    "document_id": "meeting-rooms",
+    "title": "Meeting room handbook",
+    "category": "IT Support",
+    "section": "Video equipment",
+    "page": null,
+    "text": "For video meetings, connect the room display, select the room microphone, and make a test call before guests arrive. Report broken cameras or microphones to IT Support with the room name."
+  },
+  {
+    "id": "meeting-rooms-s3-1",
+    "document_id": "meeting-rooms",
+    "title": "Meeting room handbook",
+    "category": "IT Support",
+    "section": "Room etiquette",
+    "page": null,
+    "text": "Cancel unused room reservations as soon as plans change. Leave the room tidy and clear whiteboards containing sensitive material. Meetings should finish five minutes early to allow the next group to enter."
+  },
+  {
+    "id": "password-reset-s1-1",
+    "document_id": "password-reset",
+    "title": "Account recovery",
+    "category": "IT Support",
+    "section": "Reset your password",
+    "page": null,
+    "text": "To reset your account password, use the identity portal self-service reset flow and verify with your registered second factor. Choose a unique password and store it in the approved password manager. IT Support will never ask you to share your password."
+  },
+  {
+    "id": "password-reset-s2-1",
+    "document_id": "password-reset",
+    "title": "Account recovery",
+    "category": "IT Support",
+    "section": "Lost second factor",
+    "page": null,
+    "text": "If your authentication device is lost, contact IT Support using the recovery contact process. Identity verification is required before registering a new second factor. Do not ask a colleague to share their account."
+  },
+  {
+    "id": "password-reset-s3-1",
+    "document_id": "password-reset",
+    "title": "Account recovery",
+    "category": "IT Support",
+    "section": "Locked account",
+    "page": null,
+    "text": "An account is temporarily locked after five failed sign-in attempts. Wait 15 minutes before trying again, or contact IT Support if the problem persists. Report unexpected sign-in notifications to Security Desk."
+  },
+  {
+    "id": "product-overview-s1-1",
+    "document_id": "product-overview",
+    "title": "Northstar product overview",
+    "category": "Product",
+    "section": "What we build",
+    "page": null,
+    "text": "Northstar is a fictional workspace for small teams managing customer projects. Its core objects are workspaces, projects, tasks, and client updates. This product description exists only to make the TeamDocs demonstration realistic."
+  },
+  {
+    "id": "product-overview-s2-1",
+    "document_id": "product-overview",
+    "title": "Northstar product overview",
+    "category": "Product",
+    "section": "Project lifecycle",
+    "page": null,
+    "text": "A project moves through Draft, Active, In review, and Completed states. Project owners can archive completed projects to keep their workspace tidy. Archived projects remain searchable to members with access."
+  },
+  {
+    "id": "product-overview-s3-1",
+    "document_id": "product-overview",
+    "title": "Northstar product overview",
+    "category": "Product",
+    "section": "Roles",
+    "page": null,
+    "text": "Workspace administrators manage membership and settings. Project editors can update tasks and client updates. Viewers can read project content but cannot modify it. Product permissions are separate from engineering environment access."
+  },
+  {
+    "id": "production-release-s1-1",
+    "document_id": "production-release",
+    "title": "Production release checklist",
+    "category": "Engineering",
+    "section": "Before a release",
+    "page": null,
+    "text": "A production release requires a reviewed pull request, passing automated tests, a successful staging smoke test, and a documented rollback plan. The release owner records the version and change summary in the release log. Production deployments require a separate Production Deployer role."
+  },
+  {
+    "id": "production-release-s2-1",
+    "document_id": "production-release",
+    "title": "Production release checklist",
+    "category": "Engineering",
+    "section": "Release window",
+    "page": null,
+    "text": "Routine production releases take place Tuesday through Thursday between 10:00 and 16:00 UTC. Avoid routine releases during an active incident. Emergency fixes require approval from the incident commander and still need a rollback plan."
+  },
+  {
+    "id": "production-release-s3-1",
+    "document_id": "production-release",
+    "title": "Production release checklist",
+    "category": "Engineering",
+    "section": "After a release",
+    "page": null,
+    "text": "After deploying, watch the error rate and request latency for 20 minutes. Run the health endpoint and the checkout smoke test. If the new version causes sustained errors, follow the rollback runbook and notify the incident channel."
+  },
+  {
+    "id": "release-notes-s1-1",
+    "document_id": "release-notes",
+    "title": "Writing release notes",
+    "category": "Product",
+    "section": "Audience and structure",
+    "page": null,
+    "text": "Write release notes for customers using plain language. Explain what changed, who benefits, and whether the customer needs to take action. Group entries into New, Improved, and Fixed sections."
+  },
+  {
+    "id": "release-notes-s2-1",
+    "document_id": "release-notes",
+    "title": "Writing release notes",
+    "category": "Product",
+    "section": "Review",
+    "page": null,
+    "text": "The product owner reviews release notes before publication. Engineering checks technical accuracy and Support checks that the wording is understandable. Avoid exposing internal identifiers, security-sensitive implementation details, or customer information."
+  },
+  {
+    "id": "release-notes-s3-1",
+    "document_id": "release-notes",
+    "title": "Writing release notes",
+    "category": "Product",
+    "section": "Publish",
+    "page": null,
+    "text": "Publish approved release notes after the release owner confirms the deployment is healthy. Link the note from the product update feed and notify account owners when a requested improvement is included."
+  },
+  {
+    "id": "remote-work-s1-1",
+    "document_id": "remote-work",
+    "title": "Remote work guide",
+    "category": "People",
+    "section": "Working hours",
+    "page": null,
+    "text": "Remote team members should be reachable during core collaboration hours from 10:00 to 15:00 UTC, excluding their scheduled break. Discuss timezone constraints with your manager. The remaining working hours are flexible within your local contract."
+  },
+  {
+    "id": "remote-work-s2-1",
+    "document_id": "remote-work",
+    "title": "Remote work guide",
+    "category": "People",
+    "section": "Work location",
+    "page": null,
+    "text": "Before working from another country, obtain written approval from People Operations. Give at least four weeks notice and provide the location and dates. Approval depends on employment, tax, and information-security considerations."
+  },
+  {
+    "id": "remote-work-s3-1",
+    "document_id": "remote-work",
+    "title": "Remote work guide",
+    "category": "People",
+    "section": "Communication",
+    "page": null,
+    "text": "Keep your calendar and status up to date. Prefer written project updates for non-urgent decisions. If a discussion changes a decision, record the outcome in the project document so colleagues in other timezones can follow it."
+  },
+  {
+    "id": "rollback-s1-1",
+    "document_id": "rollback",
+    "title": "Rollback runbook",
+    "category": "Engineering",
+    "section": "Trigger a rollback",
+    "page": null,
+    "text": "Start a rollback if a new release produces a sustained error rate above 2 percent for five minutes or breaks the checkout smoke test. The release owner contacts the incident commander before rolling back. If there is no active incident, the release owner opens one."
+  },
+  {
+    "id": "rollback-s2-1",
+    "document_id": "rollback",
+    "title": "Rollback runbook",
+    "category": "Engineering",
+    "section": "Restore the last version",
+    "page": null,
+    "text": "Select the last known healthy application version in the deployment console, restore that version, and rerun the smoke tests. Record the old and new version identifiers. Database migrations must be reviewed separately because reverting application code does not automatically revert a schema change."
+  },
+  {
+    "id": "rollback-s3-1",
+    "document_id": "rollback",
+    "title": "Rollback runbook",
+    "category": "Engineering",
+    "section": "Verify recovery",
+    "page": null,
+    "text": "Monitor error rate and latency for 20 minutes after rollback. Confirm the health endpoint is healthy and a test checkout succeeds. Attach the timeline to the incident report and schedule a follow-up review."
+  },
+  {
+    "id": "secrets-s1-1",
+    "document_id": "secrets",
+    "title": "Secrets and API keys",
+    "category": "Security",
+    "section": "Store secrets",
+    "page": null,
+    "text": "Store service secrets in the approved secret manager and inject them as environment variables at runtime. Never commit API keys to Git or paste them in documentation, screenshots, or chat. Development and production use different credentials."
+  },
+  {
+    "id": "secrets-s2-1",
+    "document_id": "secrets",
+    "title": "Secrets and API keys",
+    "category": "Security",
+    "section": "Suspected exposure",
+    "page": null,
+    "text": "If an API key is exposed, report a security incident, revoke the key, and issue a replacement through the approved process. Review relevant access logs. Removing the key from the latest Git commit does not remove it from repository history."
+  },
+  {
+    "id": "secrets-s3-1",
+    "document_id": "secrets",
+    "title": "Secrets and API keys",
+    "category": "Security",
+    "section": "Rotation",
+    "page": null,
+    "text": "Service owners review credentials every 90 days and rotate them according to the service policy or immediately after suspected compromise. Record the owner and purpose of each credential. Avoid shared personal tokens."
+  },
+  {
+    "id": "security-incidents-s1-1",
+    "document_id": "security-incidents",
+    "title": "Report a security incident",
+    "category": "Security",
+    "section": "Report immediately",
+    "page": null,
+    "text": "To report a security incident, open an urgent Security Desk ticket and notify the security on-call through the internal incident channel. Report suspected credential leaks, lost devices, suspicious access, or exposed customer data immediately. Do not wait for proof before reporting."
+  },
+  {
+    "id": "security-incidents-s2-1",
+    "document_id": "security-incidents",
+    "title": "Report a security incident",
+    "category": "Security",
+    "section": "What to include",
+    "page": null,
+    "text": "Include the discovery time in UTC, affected systems, a brief description, and links to relevant logs in the security incident ticket. Never paste passwords, API keys, or customer records into a ticket. Preserve evidence and avoid deleting files or resetting systems unless instructed by the security responder."
+  },
+  {
+    "id": "security-incidents-s3-1",
+    "document_id": "security-incidents",
+    "title": "Report a security incident",
+    "category": "Security",
+    "section": "After reporting",
+    "page": null,
+    "text": "The security responder acknowledges urgent incidents within 30 minutes during staffed hours. Outside staffed hours, use the emergency phone number listed in the internal staff directory. This demonstration document intentionally does not contain a real phone number."
+  },
+  {
+    "id": "staging-access-s1-1",
+    "document_id": "staging-access",
+    "title": "Staging access",
+    "category": "Engineering",
+    "section": "Request access",
+    "page": null,
+    "text": "To request access to the staging environment, open an Access Desk ticket and choose the Staging role. Include your team, project, and the date you need access. Your engineering manager must approve the request before Platform Engineering grants it. Access is normally provisioned within two business days after approval."
+  },
+  {
+    "id": "staging-access-s2-1",
+    "document_id": "staging-access",
+    "title": "Staging access",
+    "category": "Engineering",
+    "section": "Connect safely",
+    "page": null,
+    "text": "Before connecting to staging, enable multi-factor authentication and connect to the company VPN. Use your individual company account; shared logins are not allowed. Staging contains synthetic customer data only. If the VPN works but access is denied, add the error message to your Access Desk ticket."
+  },
+  {
+    "id": "staging-access-s3-1",
+    "document_id": "staging-access",
+    "title": "Staging access",
+    "category": "Engineering",
+    "section": "Access expiry",
+    "page": null,
+    "text": "Staging access expires after 30 days. Request an extension in the original ticket with a new end date and manager approval. Staging access does not grant production access."
+  },
+  {
+    "id": "support-priority-s1-1",
+    "document_id": "support-priority",
+    "title": "Customer support priorities",
+    "category": "Product",
+    "section": "Priority definitions",
+    "page": null,
+    "text": "P1 means a customer cannot use a core workflow and no workaround exists. P2 means a significant issue has a workaround. P3 covers minor issues and general questions. Security concerns are escalated to Security Desk regardless of support priority."
+  },
+  {
+    "id": "support-priority-s2-1",
+    "document_id": "support-priority",
+    "title": "Customer support priorities",
+    "category": "Product",
+    "section": "Response targets",
+    "page": null,
+    "text": "During support hours, the first-response target is one hour for P1, four hours for P2, and two business days for P3. These are internal planning targets in a fictional demo, not contractual service guarantees."
+  },
+  {
+    "id": "support-priority-s3-1",
+    "document_id": "support-priority",
+    "title": "Customer support priorities",
+    "category": "Product",
+    "section": "Escalation",
+    "page": null,
+    "text": "Escalate unresolved P1 cases to the support lead and engineering on-call. Include the affected workflow, reproduction steps, timestamps, and sanitized error details. Keep the customer updated when status changes."
+  },
+  {
+    "id": "time-off-s1-1",
+    "document_id": "time-off",
+    "title": "Time off and leave",
+    "category": "People",
+    "section": "Request annual leave",
+    "page": null,
+    "text": "Request annual leave in People Portal at least ten working days before the proposed start date. Include the dates and a short handover note. Your manager approves the request after checking team coverage. Do not treat a submitted request as approved leave."
+  },
+  {
+    "id": "time-off-s2-1",
+    "document_id": "time-off",
+    "title": "Time off and leave",
+    "category": "People",
+    "section": "Unexpected absence",
+    "page": null,
+    "text": "For unexpected absence, notify your manager as soon as practical and record the absence in People Portal. Sensitive medical details should not be posted in team channels. People Operations can explain any documentation required."
+  },
+  {
+    "id": "time-off-s3-1",
+    "document_id": "time-off",
+    "title": "Time off and leave",
+    "category": "People",
+    "section": "Handover",
+    "page": null,
+    "text": "Before approved leave, nominate a backup for active work, update project notes, and add your absence to the shared team calendar. Engineers with on-call duties must arrange a confirmed rota swap."
+  },
+  {
+    "id": "vpn-help-s1-1",
+    "document_id": "vpn-help",
+    "title": "VPN troubleshooting",
+    "category": "IT Support",
+    "section": "Connection checklist",
+    "page": null,
+    "text": "If the VPN will not connect, first check your internet connection, restart the VPN client, and verify that your device clock is correct. Confirm your multi-factor authentication request has not expired. Do not disable endpoint protection to make the connection work."
+  },
+  {
+    "id": "vpn-help-s2-1",
+    "document_id": "vpn-help",
+    "title": "VPN troubleshooting",
+    "category": "IT Support",
+    "section": "Repeated failures",
+    "page": null,
+    "text": "After two failed VPN connection attempts, open an IT Support ticket. Include the operating system, VPN client version, timestamp, and exact error code. Never include your password or recovery codes."
+  },
+  {
+    "id": "vpn-help-s3-1",
+    "document_id": "vpn-help",
+    "title": "VPN troubleshooting",
+    "category": "IT Support",
+    "section": "Connected but denied",
+    "page": null,
+    "text": "A successful VPN connection does not grant application permissions. If staging access is denied while the VPN is connected, check whether your staging role has expired and update your Access Desk ticket."
+  }
+]

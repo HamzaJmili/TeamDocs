@@ -1,0 +1,182 @@
+[
+  {
+    "id": "api-conventions",
+    "title": "API conventions",
+    "category": "Engineering",
+    "filename": "api-conventions.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Northstar internal APIs use short-lived bearer tokens issued by the identity service."
+  },
+  {
+    "id": "customer-feedback",
+    "title": "Customer feedback workflow",
+    "category": "Product",
+    "filename": "customer-feedback.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Record customer feedback in the Feedback Board with a short summary, source channel, and affected product area."
+  },
+  {
+    "id": "data-handling",
+    "title": "Data handling principles",
+    "category": "Security",
+    "filename": "data-handling.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Northstar classifies information as Public, Internal, or Restricted."
+  },
+  {
+    "id": "expenses",
+    "title": "Expense reimbursement",
+    "category": "People",
+    "filename": "expenses.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Submit expense claims in Finance Portal within 30 calendar days of the purchase."
+  },
+  {
+    "id": "first-week",
+    "title": "Your first week",
+    "category": "People",
+    "filename": "first-week.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "During your first week, start by activating your company account, setting up multi-factor authentication, and reading the onboarding checklist."
+  },
+  {
+    "id": "laptop-setup",
+    "title": "Laptop setup",
+    "category": "IT Support",
+    "filename": "laptop-setup.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "IT Support provides an enrolled laptop with disk encryption and endpoint protection enabled."
+  },
+  {
+    "id": "learning-budget",
+    "title": "Learning and development",
+    "category": "People",
+    "filename": "learning-budget.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "The fictional Northstar learning allowance is 600 euros per employee per calendar year."
+  },
+  {
+    "id": "meeting-rooms",
+    "title": "Meeting room handbook",
+    "category": "IT Support",
+    "filename": "meeting-rooms.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Reserve a meeting room by adding its resource calendar to the event invitation."
+  },
+  {
+    "id": "password-reset",
+    "title": "Account recovery",
+    "category": "IT Support",
+    "filename": "password-reset.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "To reset your account password, use the identity portal self-service reset flow and verify with your registered second factor."
+  },
+  {
+    "id": "product-overview",
+    "title": "Northstar product overview",
+    "category": "Product",
+    "filename": "product-overview.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Northstar is a fictional workspace for small teams managing customer projects."
+  },
+  {
+    "id": "production-release",
+    "title": "Production release checklist",
+    "category": "Engineering",
+    "filename": "production-release.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "A production release requires a reviewed pull request, passing automated tests, a successful staging smoke test, and a documented rollback plan."
+  },
+  {
+    "id": "release-notes",
+    "title": "Writing release notes",
+    "category": "Product",
+    "filename": "release-notes.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Write release notes for customers using plain language."
+  },
+  {
+    "id": "remote-work",
+    "title": "Remote work guide",
+    "category": "People",
+    "filename": "remote-work.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Remote team members should be reachable during core collaboration hours from 10:00 to 15:00 UTC, excluding their scheduled break."
+  },
+  {
+    "id": "rollback",
+    "title": "Rollback runbook",
+    "category": "Engineering",
+    "filename": "rollback.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Start a rollback if a new release produces a sustained error rate above 2 percent for five minutes or breaks the checkout smoke test."
+  },
+  {
+    "id": "secrets",
+    "title": "Secrets and API keys",
+    "category": "Security",
+    "filename": "secrets.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Store service secrets in the approved secret manager and inject them as environment variables at runtime."
+  },
+  {
+    "id": "security-incidents",
+    "title": "Report a security incident",
+    "category": "Security",
+    "filename": "security-incidents.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "To report a security incident, open an urgent Security Desk ticket and notify the security on-call through the internal incident channel."
+  },
+  {
+    "id": "staging-access",
+    "title": "Staging access",
+    "category": "Engineering",
+    "filename": "staging-access.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "To request access to the staging environment, open an Access Desk ticket and choose the Staging role."
+  },
+  {
+    "id": "support-priority",
+    "title": "Customer support priorities",
+    "category": "Product",
+    "filename": "support-priority.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "P1 means a customer cannot use a core workflow and no workaround exists."
+  },
+  {
+    "id": "time-off",
+    "title": "Time off and leave",
+    "category": "People",
+    "filename": "time-off.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "Request annual leave in People Portal at least ten working days before the proposed start date."
+  },
+  {
+    "id": "vpn-help",
+    "title": "VPN troubleshooting",
+    "category": "IT Support",
+    "filename": "vpn-help.md",
+    "format": "MD",
+    "chunks": 3,
+    "description": "If the VPN will not connect, first check your internet connection, restart the VPN client, and verify that your device clock is correct."
+  }
+]

@@ -1,0 +1,434 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "How do I request access to the staging environment?",
+    "expected_ids": [
+      "staging-access-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Who approves staging access?",
+    "expected_ids": [
+      "staging-access-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "When does staging access expire?",
+    "expected_ids": [
+      "staging-access-s3-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q04",
+    "split": "test",
+    "question": "What should I do during my first week?",
+    "expected_ids": [
+      "first-week-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q05",
+    "split": "test",
+    "question": "What should I finish by Friday of my first week?",
+    "expected_ids": [
+      "first-week-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "How do I report a security incident?",
+    "expected_ids": [
+      "security-incidents-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "What information belongs in a security incident ticket?",
+    "expected_ids": [
+      "security-incidents-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "What is required before a production release?",
+    "expected_ids": [
+      "production-release-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q09",
+    "split": "test",
+    "question": "When are routine production releases allowed?",
+    "expected_ids": [
+      "production-release-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q10",
+    "split": "test",
+    "question": "When should we trigger a rollback?",
+    "expected_ids": [
+      "rollback-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "How do I verify recovery after a rollback?",
+    "expected_ids": [
+      "rollback-s3-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "How does API pagination work?",
+    "expected_ids": [
+      "api-conventions-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "Which API errors should clients retry?",
+    "expected_ids": [
+      "api-conventions-s3-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q14",
+    "split": "test",
+    "question": "How do I request annual leave?",
+    "expected_ids": [
+      "time-off-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q15",
+    "split": "test",
+    "question": "What are the remote work core hours?",
+    "expected_ids": [
+      "remote-work-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q16",
+    "split": "dev",
+    "question": "How much is the annual learning allowance?",
+    "expected_ids": [
+      "learning-budget-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q17",
+    "split": "dev",
+    "question": "How do I get a course approved?",
+    "expected_ids": [
+      "learning-budget-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q18",
+    "split": "dev",
+    "question": "When must I submit an expense claim?",
+    "expected_ids": [
+      "expenses-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "question": "What should I check when the VPN will not connect?",
+    "expected_ids": [
+      "vpn-help-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "question": "How many failed VPN attempts before opening a ticket?",
+    "expected_ids": [
+      "vpn-help-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q21",
+    "split": "dev",
+    "question": "What software can engineers install on their laptop?",
+    "expected_ids": [
+      "laptop-setup-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q22",
+    "split": "dev",
+    "question": "How do I reset my account password?",
+    "expected_ids": [
+      "password-reset-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q23",
+    "split": "dev",
+    "question": "What are the information classification levels?",
+    "expected_ids": [
+      "data-handling-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q24",
+    "split": "test",
+    "question": "Where should service secrets be stored?",
+    "expected_ids": [
+      "secrets-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q25",
+    "split": "test",
+    "question": "What should I do if an API key is exposed?",
+    "expected_ids": [
+      "secrets-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q26",
+    "split": "dev",
+    "question": "How frequently does the product team review customer feedback?",
+    "expected_ids": [
+      "customer-feedback-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q27",
+    "split": "dev",
+    "question": "What is the first-response target for P1 support cases?",
+    "expected_ids": [
+      "support-priority-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q28",
+    "split": "dev",
+    "question": "Who reviews release notes?",
+    "expected_ids": [
+      "release-notes-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q29",
+    "split": "test",
+    "question": "My staging permission stopped working after a month. What now?",
+    "expected_ids": [
+      "staging-access-s3-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q30",
+    "split": "test",
+    "question": "I have joined the company. Who helps with everyday questions?",
+    "expected_ids": [
+      "first-week-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q31",
+    "split": "dev",
+    "question": "Must I wait for proof before reporting suspicious access?",
+    "expected_ids": [
+      "security-incidents-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q32",
+    "split": "dev",
+    "question": "Can we deploy a routine change on a Friday?",
+    "expected_ids": [
+      "production-release-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q33",
+    "split": "dev",
+    "question": "Does reverting application code also revert database migrations?",
+    "expected_ids": [
+      "rollback-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q34",
+    "split": "test",
+    "question": "Can I use a colleague account if my authentication device is lost?",
+    "expected_ids": [
+      "password-reset-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q35",
+    "split": "test",
+    "question": "Can I copy production customer records into a test notebook?",
+    "expected_ids": [
+      "data-handling-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q36",
+    "split": "dev",
+    "question": "Are feature requests promises of delivery?",
+    "expected_ids": [
+      "customer-feedback-s2-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q37",
+    "split": "dev",
+    "question": "Does being a project editor give me engineering environment access?",
+    "expected_ids": [
+      "product-overview-s3-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q38",
+    "split": "dev",
+    "question": "Must the release be healthy before publishing release notes?",
+    "expected_ids": [
+      "release-notes-s3-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q39",
+    "split": "test",
+    "question": "What is the CEO salary?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q40",
+    "split": "test",
+    "question": "What is the office parking reimbursement amount?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q41",
+    "split": "dev",
+    "question": "Does the company sponsor visas?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q42",
+    "split": "dev",
+    "question": "How many annual leave days does my contract include?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q43",
+    "split": "dev",
+    "question": "What is the current production API key?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q44",
+    "split": "test",
+    "question": "What is the emergency security phone number?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q45",
+    "split": "test",
+    "question": "How many paid study leave days do I get?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q46",
+    "split": "dev",
+    "question": "Which health insurer covers employees?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q47",
+    "split": "dev",
+    "question": "What is the office street address?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q48",
+    "split": "dev",
+    "question": "What revenue did Northstar earn last year?",
+    "expected_ids": [],
+    "answerable": false
+  },
+  {
+    "id": "q49",
+    "split": "test",
+    "question": "What is needed for staging access and what must I test before a production release?",
+    "expected_ids": [
+      "staging-access-s1-1",
+      "production-release-s1-1"
+    ],
+    "answerable": true
+  },
+  {
+    "id": "q50",
+    "split": "test",
+    "question": "What should I do after leaking an API key and what belongs in the incident report?",
+    "expected_ids": [
+      "secrets-s2-1",
+      "security-incidents-s2-1"
+    ],
+    "answerable": true
+  }
+]

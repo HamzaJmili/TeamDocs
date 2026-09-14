@@ -1,0 +1,595 @@
+{
+  "generated_at": "2026-09-14T00:28:32.413618+00:00",
+  "method": "bm25",
+  "split": "dev",
+  "total_questions": 30,
+  "answerable_questions": 24,
+  "unanswerable_questions": 6,
+  "corpus_hash": "11ab1a622f0032bf94e0aca24f0b978122d83d4021344c1dab47178ab48d14fe",
+  "metrics": {
+    "hit_at_5": 1.0,
+    "recall_at_5": 1.0,
+    "mrr_at_5": 0.9583333333333334,
+    "all_evidence_at_5": 1.0
+  },
+  "disclosure": "Synthetic corpus and author-written questions. This is a small engineering check, not an independent benchmark. Test questions are designated holdouts but visible in the repository. No LLM answer quality has been measured in this report.",
+  "cases": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "question": "How do I request access to the staging environment?",
+      "expected_ids": [
+        "staging-access-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "staging-access-s1-1",
+        "staging-access-s3-1",
+        "staging-access-s2-1",
+        "vpn-help-s3-1",
+        "first-week-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "question": "Who approves staging access?",
+      "expected_ids": [
+        "staging-access-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "staging-access-s3-1",
+        "staging-access-s1-1",
+        "staging-access-s2-1",
+        "vpn-help-s3-1",
+        "first-week-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "question": "When does staging access expire?",
+      "expected_ids": [
+        "staging-access-s3-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "staging-access-s3-1",
+        "staging-access-s1-1",
+        "staging-access-s2-1",
+        "vpn-help-s3-1",
+        "first-week-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "question": "How do I report a security incident?",
+      "expected_ids": [
+        "security-incidents-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "security-incidents-s1-1",
+        "security-incidents-s2-1",
+        "security-incidents-s3-1",
+        "secrets-s2-1",
+        "rollback-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "question": "What information belongs in a security incident ticket?",
+      "expected_ids": [
+        "security-incidents-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "security-incidents-s2-1",
+        "security-incidents-s1-1",
+        "data-handling-s1-1",
+        "release-notes-s2-1",
+        "remote-work-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "question": "What is required before a production release?",
+      "expected_ids": [
+        "production-release-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "production-release-s1-1",
+        "production-release-s2-1",
+        "production-release-s3-1",
+        "password-reset-s2-1",
+        "rollback-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "question": "How do I verify recovery after a rollback?",
+      "expected_ids": [
+        "rollback-s3-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "rollback-s3-1",
+        "password-reset-s1-1",
+        "production-release-s3-1",
+        "vpn-help-s2-1",
+        "password-reset-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "question": "How does API pagination work?",
+      "expected_ids": [
+        "api-conventions-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "api-conventions-s2-1",
+        "secrets-s1-1",
+        "secrets-s2-1",
+        "api-conventions-s3-1",
+        "remote-work-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "question": "Which API errors should clients retry?",
+      "expected_ids": [
+        "api-conventions-s3-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "api-conventions-s3-1",
+        "api-conventions-s2-1",
+        "production-release-s3-1",
+        "secrets-s1-1",
+        "secrets-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q16",
+      "split": "dev",
+      "question": "How much is the annual learning allowance?",
+      "expected_ids": [
+        "learning-budget-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "learning-budget-s1-1",
+        "time-off-s1-1",
+        "learning-budget-s2-1",
+        "learning-budget-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q17",
+      "split": "dev",
+      "question": "How do I get a course approved?",
+      "expected_ids": [
+        "learning-budget-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "learning-budget-s2-1",
+        "learning-budget-s3-1",
+        "laptop-setup-s2-1",
+        "data-handling-s1-1",
+        "release-notes-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q18",
+      "split": "dev",
+      "question": "When must I submit an expense claim?",
+      "expected_ids": [
+        "expenses-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "expenses-s1-1",
+        "learning-budget-s2-1",
+        "expenses-s2-1",
+        "time-off-s3-1",
+        "expenses-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q21",
+      "split": "dev",
+      "question": "What software can engineers install on their laptop?",
+      "expected_ids": [
+        "laptop-setup-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "laptop-setup-s2-1",
+        "laptop-setup-s1-1",
+        "laptop-setup-s3-1",
+        "time-off-s3-1",
+        "product-overview-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q22",
+      "split": "dev",
+      "question": "How do I reset my account password?",
+      "expected_ids": [
+        "password-reset-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "password-reset-s1-1",
+        "vpn-help-s2-1",
+        "password-reset-s3-1",
+        "password-reset-s2-1",
+        "release-notes-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q23",
+      "split": "dev",
+      "question": "What are the information classification levels?",
+      "expected_ids": [
+        "data-handling-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "data-handling-s1-1",
+        "expenses-s2-1",
+        "release-notes-s2-1",
+        "remote-work-s2-1",
+        "data-handling-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q26",
+      "split": "dev",
+      "question": "How frequently does the product team review customer feedback?",
+      "expected_ids": [
+        "customer-feedback-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "customer-feedback-s2-1",
+        "customer-feedback-s1-1",
+        "customer-feedback-s3-1",
+        "release-notes-s2-1",
+        "product-overview-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q27",
+      "split": "dev",
+      "question": "What is the first-response target for P1 support cases?",
+      "expected_ids": [
+        "support-priority-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "support-priority-s2-1",
+        "support-priority-s3-1",
+        "first-week-s3-1",
+        "support-priority-s1-1",
+        "first-week-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q28",
+      "split": "dev",
+      "question": "Who reviews release notes?",
+      "expected_ids": [
+        "release-notes-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "release-notes-s2-1",
+        "release-notes-s3-1",
+        "release-notes-s1-1",
+        "customer-feedback-s2-1",
+        "production-release-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q31",
+      "split": "dev",
+      "question": "Must I wait for proof before reporting suspicious access?",
+      "expected_ids": [
+        "security-incidents-s1-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "security-incidents-s1-1",
+        "staging-access-s1-1",
+        "password-reset-s3-1",
+        "time-off-s3-1",
+        "staging-access-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q32",
+      "split": "dev",
+      "question": "Can we deploy a routine change on a Friday?",
+      "expected_ids": [
+        "production-release-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "production-release-s2-1",
+        "first-week-s2-1",
+        "meeting-rooms-s3-1",
+        "production-release-s1-1",
+        "rollback-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q33",
+      "split": "dev",
+      "question": "Does reverting application code also revert database migrations?",
+      "expected_ids": [
+        "rollback-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "rollback-s2-1",
+        "vpn-help-s2-1",
+        "vpn-help-s3-1",
+        "api-conventions-s1-1",
+        "api-conventions-s3-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q36",
+      "split": "dev",
+      "question": "Are feature requests promises of delivery?",
+      "expected_ids": [
+        "customer-feedback-s2-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "customer-feedback-s2-1",
+        "customer-feedback-s1-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q37",
+      "split": "dev",
+      "question": "Does being a project editor give me engineering environment access?",
+      "expected_ids": [
+        "product-overview-s3-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "staging-access-s1-1",
+        "product-overview-s3-1",
+        "product-overview-s2-1",
+        "laptop-setup-s2-1",
+        "remote-work-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "q38",
+      "split": "dev",
+      "question": "Must the release be healthy before publishing release notes?",
+      "expected_ids": [
+        "release-notes-s3-1"
+      ],
+      "answerable": true,
+      "retrieved_ids": [
+        "release-notes-s3-1",
+        "release-notes-s2-1",
+        "time-off-s3-1",
+        "release-notes-s1-1",
+        "rollback-s2-1"
+      ],
+      "hit": true,
+      "all_evidence_found": true,
+      "recall": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "q41",
+      "split": "dev",
+      "question": "Does the company sponsor visas?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [
+        "staging-access-s2-1",
+        "expenses-s3-1",
+        "data-handling-s1-1",
+        "laptop-setup-s1-1",
+        "first-week-s1-1"
+      ],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "q42",
+      "split": "dev",
+      "question": "How many annual leave days does my contract include?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [
+        "time-off-s1-1",
+        "staging-access-s1-1",
+        "remote-work-s1-1",
+        "time-off-s3-1",
+        "vpn-help-s2-1"
+      ],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "q43",
+      "split": "dev",
+      "question": "What is the current production API key?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [
+        "secrets-s2-1",
+        "api-conventions-s3-1",
+        "secrets-s1-1",
+        "production-release-s1-1",
+        "production-release-s2-1"
+      ],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "q46",
+      "split": "dev",
+      "question": "Which health insurer covers employees?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [
+        "rollback-s3-1",
+        "learning-budget-s1-1",
+        "production-release-s3-1",
+        "support-priority-s1-1"
+      ],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "q47",
+      "split": "dev",
+      "question": "What is the office street address?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "q48",
+      "split": "dev",
+      "question": "What revenue did Northstar earn last year?",
+      "expected_ids": [],
+      "answerable": false,
+      "retrieved_ids": [
+        "learning-budget-s1-1",
+        "rollback-s2-1",
+        "product-overview-s1-1",
+        "product-overview-s2-1",
+        "product-overview-s3-1"
+      ],
+      "hit": false,
+      "all_evidence_found": false,
+      "recall": null,
+      "reciprocal_rank": 0
+    }
+  ]
+}

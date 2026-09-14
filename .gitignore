@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+docs/_build/
+.DS_Store
+data/index/embeddings.npz
+data/index/embedding_meta.json
+*.log
+
