@@ -1,4 +1,6 @@
 """Small OpenAI HTTP adapter. No model keys, prompts or errors are exposed."""
+import asyncio
+import logging
 import json
 import math
 import httpx
@@ -82,11 +84,29 @@ class GeminiProvider:
     async def _post(self, route, payload):
         try:
             async with httpx.AsyncClient(timeout=35.0) as client:
-                response = await client.post(
-                    "https://generativelanguage.googleapis.com/v1beta/" + route,
-                    headers={"x-goog-api-key": self.key}, json=payload)
-                response.raise_for_status()
-                return response.json()
+                for attempt in range(2):
+                    response = await client.post(
+                        "https://generativelanguage.googleapis.com/v1beta/" + route,
+                        headers={"x-goog-api-key": self.key}, json=payload)
+                    if response.status_code in {502, 503, 504} and attempt == 0:
+                        # Retry transient server overload once, never credential or quota errors.
+                        await asyncio.sleep(1)
+                        continue
+                    response.raise_for_status()
+                    return response.json()
+        except httpx.HTTPStatusError as exc:
+            status = exc.response.status_code
+            logging.getLogger(__name__).warning("Gemini request failed: HTTP %s", status)
+            messages = {
+                401: "The AI service credentials were rejected. The site owner must check the API key.",
+                403: "The AI service denied access. The site owner must check the API key and project permissions.",
+                404: "The configured AI model is unavailable. The site owner must check the model settings.",
+                429: "The AI provider's request limit has been reached. Please try again later.",
+            }
+            message = messages.get(status, "The AI service is temporarily unavailable. Please try again later.")
+            if status in {502, 503, 504}:
+                message = "The AI service is busy right now. We retried once; please try again in a few minutes."
+            raise ProviderError(message) from exc
         except (httpx.HTTPError, ValueError) as exc:
             raise ProviderError("The AI service is temporarily unavailable. Check your provider quota and try again later.") from exc
 

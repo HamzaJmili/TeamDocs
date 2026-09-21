@@ -29,3 +29,7 @@ These controls are useful engineering practices, not a security certification. B
 
 The most valuable next steps are an independently written benchmark, real live-model evaluation, a document-version policy, and a deployment smoke check on Render. Add complexity only in response to observed failures.
 
+
+## Temporary provider failures
+
+Gemini HTTP 502, 503 and 504 responses are retried once after one second. Credentials, unavailable models and quota errors are not retried. Persistent errors produce distinct user messages and log only the HTTP status. This bounded retry does not guarantee provider availability and can increase request latency.

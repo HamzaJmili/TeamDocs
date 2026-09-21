@@ -3,6 +3,35 @@ import json
 import pytest
 from app.config import Settings
 from app.provider import GeminiProvider, ProviderError, make_provider
+import httpx
+
+
+@pytest.mark.parametrize('statuses,expected_calls,message', [
+    ([503, 200], 2, None),
+    ([503, 503], 2, 'busy right now'),
+    ([429], 1, 'request limit'),
+    ([403], 1, 'denied access'),
+    ([404], 1, 'model is unavailable'),
+])
+def test_gemini_http_failure_handling(monkeypatch, statuses, expected_calls, message):
+    calls = []
+    def respond(request):
+        status = statuses[len(calls)]
+        calls.append(request)
+        return httpx.Response(status, json={'ok': True, 'error': {'message': 'secret-fake-key'}})
+    client_type = httpx.AsyncClient
+    monkeypatch.setattr('app.provider.httpx.AsyncClient', lambda **kwargs: client_type(transport=httpx.MockTransport(respond), **kwargs))
+    async def no_wait(seconds):
+        assert seconds == 1
+    monkeypatch.setattr('app.provider.asyncio.sleep', no_wait)
+    provider = GeminiProvider('secret-fake-key')
+    if message:
+        with pytest.raises(ProviderError, match=message) as caught:
+            asyncio.run(provider._post('models/test:generateContent', {}))
+        assert 'secret-fake-key' not in str(caught.value)
+    else:
+        assert asyncio.run(provider._post('models/test:generateContent', {}))['ok']
+    assert len(calls) == expected_calls
 
 
 def test_gemini_selection():
